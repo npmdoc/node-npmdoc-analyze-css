@@ -1,0 +1,851 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/macbre/analyze-css#readme"
+
+    >analyze-css (v0.12.4)</a>
+</h1>
+<h4>CSS selectors complexity and performance analyzer</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.analyze-css">module analyze-css</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.analyze-css">
+            function <span class="apidocSignatureSpan"></span>analyze-css
+            <span class="apidocSignatureSpan">(css, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.collection">
+            function <span class="apidocSignatureSpan">analyze-css.</span>collection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.colors">
+            function <span class="apidocSignatureSpan">analyze-css.</span>colors
+            <span class="apidocSignatureSpan">(analyzer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.preprocessors">
+            function <span class="apidocSignatureSpan">analyze-css.</span>preprocessors
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.toString">
+            function <span class="apidocSignatureSpan">analyze-css.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">analyze-css.</span>EXIT_CSS_PASSED_IS_NOT_STRING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">analyze-css.</span>EXIT_EMPTY_CSS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">analyze-css.</span>EXIT_FILE_LOADING_FAILED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">analyze-css.</span>EXIT_NEED_OPTIONS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">analyze-css.</span>EXIT_PARSING_FAILED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">analyze-css.</span>EXIT_URL_LOADING_FAILED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">analyze-css.</span>collection.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">analyze-css.</span>preprocessors.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">analyze-css.</span>path</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">analyze-css.</span>pathBin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">analyze-css.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.analyze-css.collection">module analyze-css.collection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.collection.collection">
+            function <span class="apidocSignatureSpan">analyze-css.</span>collection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.analyze-css.collection.prototype">module analyze-css.collection.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.collection.prototype.forEach">
+            function <span class="apidocSignatureSpan">analyze-css.collection.prototype.</span>forEach
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.collection.prototype.push">
+            function <span class="apidocSignatureSpan">analyze-css.collection.prototype.</span>push
+            <span class="apidocSignatureSpan">(item)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.collection.prototype.sort">
+            function <span class="apidocSignatureSpan">analyze-css.collection.prototype.</span>sort
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.analyze-css.colors">module analyze-css.colors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.colors.colors">
+            function <span class="apidocSignatureSpan">analyze-css.</span>colors
+            <span class="apidocSignatureSpan">(analyzer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.colors.extractColors">
+            function <span class="apidocSignatureSpan">analyze-css.colors.</span>extractColors
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">analyze-css.colors.</span>description</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.analyze-css.preprocessors">module analyze-css.preprocessors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.preprocessors.preprocessors">
+            function <span class="apidocSignatureSpan">analyze-css.</span>preprocessors
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.analyze-css.preprocessors.prototype">module analyze-css.preprocessors.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.preprocessors.prototype.findMatchingByFileName">
+            function <span class="apidocSignatureSpan">analyze-css.preprocessors.prototype.</span>findMatchingByFileName
+            <span class="apidocSignatureSpan">(fileName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.preprocessors.prototype.get">
+            function <span class="apidocSignatureSpan">analyze-css.preprocessors.prototype.</span>get
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.preprocessors.prototype.getAll">
+            function <span class="apidocSignatureSpan">analyze-css.preprocessors.prototype.</span>getAll
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.analyze-css" id="apidoc.module.analyze-css">module analyze-css</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.analyze-css" id="apidoc.element.analyze-css.analyze-css">
+        function <span class="apidocSignatureSpan"></span>analyze-css
+        <span class="apidocSignatureSpan">(css, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function analyzer(css, options, callback) {
+	var res;
+
+	// options can be omitted
+	if (typeof options === &#x27;function&#x27;) {
+		callback = options;
+		options = {};
+	}
+
+	this.options = options;
+	debug(&#x27;opts: %j&#x27;, this.options);
+
+	if (typeof css !== &#x27;string&#x27;) {
+		callback(this.error(&#x27;css parameter passed is not a string!&#x27;, analyzer.EXIT_CSS_PASSED_IS_NOT_STRING), null);
+		return;
+	}
+
+	// preprocess the CSS (issue #3)
+	if (typeof options.preprocessor === &#x27;string&#x27;) {
+		debug(&#x27;Using &#x22;%s&#x22; preprocessor&#x27;, options.preprocessor);
+
+		var preprocessor = preprocessors.get(options.preprocessor);
+
+		try {
+			css = preprocessor.process(css, options);
+		} catch (ex) {
+			throw new Error(&#x27;Preprocessing failed: &#x27; + ex);
+		}
+
+		debug(&#x27;Preprocessing completed&#x27;);
+	}
+
+	res = this.analyze(css);
+
+	// error handling
+	if (res !== true) {
+		callback(res, null);
+		return;
+	}
+
+	// return the results
+	res = {
+		generator: &#x27;analyze-css v&#x27; + VERSION,
+		metrics: this.metrics,
+	};
+
+	// disable offenders output if requested (issue #64)
+	if (options.noOffenders !== true) {
+		res.offenders = this.offenders;
+	}
+
+	callback(null, res);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.collection" id="apidoc.element.analyze-css.collection">
+        function <span class="apidocSignatureSpan">analyze-css.</span>collection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function collection() {
+	this.items = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.colors" id="apidoc.element.analyze-css.colors">
+        function <span class="apidocSignatureSpan">analyze-css.</span>colors
+        <span class="apidocSignatureSpan">(analyzer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rule(analyzer) {
+	// store unique colors with the counter
+	var colors = new collection();
+
+	analyzer.setMetric(&#x27;colors&#x27;);
+
+	analyzer.on(&#x27;declaration&#x27;, function(rule, property, value) {
+		var extractedColors = extractColors(value);
+
+		if (extractedColors === false) {
+			return;
+		}
+
+		debug(&#x27;%s: %s -&#x3e; %j&#x27;, property, value, extractedColors);
+
+		extractedColors.
+		map(function(item) {
+			var color = onecolor(item);
+
+			// handle parsing errors
+			if (color === false) {
+				return false;
+			}
+
+			// return either rgba(0,0,0,0.25) or #000000
+			return (color.alpha() &#x3c; 1.0) ? color.cssa() : color.hex();
+		}).
+		forEach(function(color) {
+			if (color !== false) {
+				colors.push(color);
+			}
+		});
+	});
+
+	analyzer.on(&#x27;report&#x27;, function() {
+		analyzer.setCurrentPosition(undefined);
+
+		colors.sort().forEach(function(color, cnt) {
+			analyzer.incrMetric(&#x27;colors&#x27;);
+			analyzer.addOffender(&#x27;colors&#x27;, format(&#x27;%s (%d times)&#x27;, color, cnt));
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.preprocessors" id="apidoc.element.analyze-css.preprocessors">
+        function <span class="apidocSignatureSpan">analyze-css.</span>preprocessors
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preprocessors = function () {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.toString" id="apidoc.element.analyze-css.toString">
+        function <span class="apidocSignatureSpan">analyze-css.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	fetch(requestOptions.url, requestOptions).
+	then(function(resp) {
+		debug(&#x27;HTTP %d %s&#x27;, resp.status, resp.statusText);
+		debug(&#x27;Headers: %j&#x27;, resp.headers._headers);
+
+		if (!resp.ok) {
+			var err = new Error(&#x27;HTTP request failed: &#x27; + (err ? err.<span class="apidocCodeKeywordSpan">toString</span>() : &#
+x27;received HTTP &#x27; + resp.status + &#x27; &#x27; + resp.statusText));
+			callback(err);
+		} else {
+			return resp.text(); // a promise
+		}
+	}).
+	then(function(body) {
+		debug(&#x27;Received %d bytes of CSS&#x27;, body.length);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.analyze-css.collection" id="apidoc.module.analyze-css.collection">module analyze-css.collection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.collection.collection" id="apidoc.element.analyze-css.collection.collection">
+        function <span class="apidocSignatureSpan">analyze-css.</span>collection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function collection() {
+	this.items = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.analyze-css.collection.prototype" id="apidoc.module.analyze-css.collection.prototype">module analyze-css.collection.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.collection.prototype.forEach" id="apidoc.element.analyze-css.collection.prototype.forEach">
+        function <span class="apidocSignatureSpan">analyze-css.collection.prototype.</span>forEach
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forEach = function (callback) {
+		Object.keys(this.items).forEach(function(key) {
+			callback(key, this.items[key].cnt);
+		}, this);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+		// sort in descending order (by cnt)
+		sortedKeys = Object.keys(this.items).sort((function(a, b) {
+			return this.items[b].cnt - this.items[a].cnt;
+		}).bind(this));
+
+		// build new items dictionary
+		sortedKeys.<span class="apidocCodeKeywordSpan">forEach</span>(function(key) {
+			newItems[key] = this.items[key];
+		}, this);
+
+		this.items = newItems;
+		return this;
+	},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.collection.prototype.push" id="apidoc.element.analyze-css.collection.prototype.push">
+        function <span class="apidocSignatureSpan">analyze-css.collection.prototype.</span>push
+        <span class="apidocSignatureSpan">(item)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">push = function (item) {
+		if (typeof this.items[item] === &#x27;undefined&#x27;) {
+			this.items[item] = {
+				cnt: 1
+			};
+		} else {
+			this.items[item].cnt++;
+		}
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			res = [];
+
+		files = glob.sync(__dirname + &#x27;/preprocessors/*.js&#x27;);
+		debug(&#x27;Initializing...&#x27;);
+
+		if (Array.isArray(files)) {
+			files.forEach(function(file) {
+				res.<span class="apidocCodeKeywordSpan">push</span>(require(file));
+			});
+		}
+
+		return res;
+	},
+
+	// get name of matching preprocessor
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.collection.prototype.sort" id="apidoc.element.analyze-css.collection.prototype.sort">
+        function <span class="apidocSignatureSpan">analyze-css.collection.prototype.</span>sort
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sort = function () {
+		var newItems = {},
+			sortedKeys;
+
+		// sort in descending order (by cnt)
+		sortedKeys = Object.keys(this.items).sort((function(a, b) {
+			return this.items[b].cnt - this.items[a].cnt;
+		}).bind(this));
+
+		// build new items dictionary
+		sortedKeys.forEach(function(key) {
+			newItems[key] = this.items[key];
+		}, this);
+
+		this.items = newItems;
+		return this;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	},
+
+	sort: function() {
+		var newItems = {},
+			sortedKeys;
+
+		// sort in descending order (by cnt)
+		sortedKeys = Object.keys(this.items).<span class="apidocCodeKeywordSpan">sort</span>((function(a, b) {
+			return this.items[b].cnt - this.items[a].cnt;
+		}).bind(this));
+
+		// build new items dictionary
+		sortedKeys.forEach(function(key) {
+			newItems[key] = this.items[key];
+		}, this);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.analyze-css.colors" id="apidoc.module.analyze-css.colors">module analyze-css.colors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.colors.colors" id="apidoc.element.analyze-css.colors.colors">
+        function <span class="apidocSignatureSpan">analyze-css.</span>colors
+        <span class="apidocSignatureSpan">(analyzer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rule(analyzer) {
+	// store unique colors with the counter
+	var colors = new collection();
+
+	analyzer.setMetric(&#x27;colors&#x27;);
+
+	analyzer.on(&#x27;declaration&#x27;, function(rule, property, value) {
+		var extractedColors = extractColors(value);
+
+		if (extractedColors === false) {
+			return;
+		}
+
+		debug(&#x27;%s: %s -&#x3e; %j&#x27;, property, value, extractedColors);
+
+		extractedColors.
+		map(function(item) {
+			var color = onecolor(item);
+
+			// handle parsing errors
+			if (color === false) {
+				return false;
+			}
+
+			// return either rgba(0,0,0,0.25) or #000000
+			return (color.alpha() &#x3c; 1.0) ? color.cssa() : color.hex();
+		}).
+		forEach(function(color) {
+			if (color !== false) {
+				colors.push(color);
+			}
+		});
+	});
+
+	analyzer.on(&#x27;report&#x27;, function() {
+		analyzer.setCurrentPosition(undefined);
+
+		colors.sort().forEach(function(color, cnt) {
+			analyzer.incrMetric(&#x27;colors&#x27;);
+			analyzer.addOffender(&#x27;colors&#x27;, format(&#x27;%s (%d times)&#x27;, color, cnt));
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.colors.extractColors" id="apidoc.element.analyze-css.colors.extractColors">
+        function <span class="apidocSignatureSpan">analyze-css.colors.</span>extractColors
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extractColors(value) {
+	var matches = value.match(regex);
+	return matches || false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.analyze-css.preprocessors" id="apidoc.module.analyze-css.preprocessors">module analyze-css.preprocessors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.preprocessors.preprocessors" id="apidoc.element.analyze-css.preprocessors.preprocessors">
+        function <span class="apidocSignatureSpan">analyze-css.</span>preprocessors
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preprocessors = function () {
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.analyze-css.preprocessors.prototype" id="apidoc.module.analyze-css.preprocessors.prototype">module analyze-css.preprocessors.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.preprocessors.prototype.findMatchingByFileName" id="apidoc.element.analyze-css.preprocessors.prototype.findMatchingByFileName">
+        function <span class="apidocSignatureSpan">analyze-css.preprocessors.prototype.</span>findMatchingByFileName
+        <span class="apidocSignatureSpan">(fileName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findMatchingByFileName = function (fileName) {
+		var matching = false;
+
+		this.getAll().forEach(function(preprocessor) {
+			if (preprocessor.matchesFileName(fileName)) {
+				matching = preprocessor.name;
+
+				debug(&#x27;%s matches &#x22;%s&#x22; preprocessor&#x27;, fileName, matching);
+				return false;
+			}
+		});
+
+		return matching;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				err.code = analyzer.EXIT_FILE_LOADING_FAILED;
+
+				debug(err);
+				callback(err);
+			} else {
+				// find the matching preprocessor and use it
+				if (analyzerOpts.preprocessor === false) {
+					analyzerOpts.preprocessor = preprocessors.<span class="apidocCodeKeywordSpan">findMatchingByFileName</span>(options.file);
+				}
+
+				// pass the name of the file being analyzed
+				analyzerOpts.file = options.file;
+
+				analyze(css);
+			}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.preprocessors.prototype.get" id="apidoc.element.analyze-css.preprocessors.prototype.get">
+        function <span class="apidocSignatureSpan">analyze-css.preprocessors.prototype.</span>get
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (name) {
+		return require(__dirname + &#x27;/preprocessors/&#x27; + name + &#x27;.js&#x27;);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.analyze-css.preprocessors.prototype.getAll" id="apidoc.element.analyze-css.preprocessors.prototype.getAll">
+        function <span class="apidocSignatureSpan">analyze-css.preprocessors.prototype.</span>getAll
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAll = function () {
+		var files,
+			res = [];
+
+		files = glob.sync(__dirname + &#x27;/preprocessors/*.js&#x27;);
+		debug(&#x27;Initializing...&#x27;);
+
+		if (Array.isArray(files)) {
+			files.forEach(function(file) {
+				res.push(require(file));
+			});
+		}
+
+		return res;
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		return res;
+	},
+
+	// get name of matching preprocessor
+	findMatchingByFileName: function(fileName) {
+		var matching = false;
+
+		this.<span class="apidocCodeKeywordSpan">getAll</span>().forEach(function(preprocessor) {
+			if (preprocessor.matchesFileName(fileName)) {
+				matching = preprocessor.name;
+
+				debug(&#x27;%s matches &#x22;%s&#x22; preprocessor&#x27;, fileName, matching);
+				return false;
+			}
+		});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
