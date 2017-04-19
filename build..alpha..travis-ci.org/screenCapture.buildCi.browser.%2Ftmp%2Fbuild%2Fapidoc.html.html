@@ -92,15 +92,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.analyze-css.toString">
-            function <span class="apidocSignatureSpan">analyze-css.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">analyze-css.</span>EXIT_CSS_PASSED_IS_NOT_STRING</span>
 
         </li>
@@ -435,38 +426,6 @@
 
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.analyze-css.toString" id="apidoc.element.analyze-css.toString">
-        function <span class="apidocSignatureSpan">analyze-css.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-	fetch(requestOptions.url, requestOptions).
-	then(function(resp) {
-		debug('HTTP %d %s', resp.status, resp.statusText);
-		debug('Headers: %j', resp.headers._headers);
-
-		if (!resp.ok) {
-			var err = new Error('HTTP request failed: ' + (err ? err.<span class="apidocCodeKeywordSpan">toString</span>() : &amp;#
-x27;received HTTP ' + resp.status + ' ' + resp.statusText));
-			callback(err);
-		} else {
-			return resp.text(); // a promise
-		}
-	}).
-	then(function(body) {
-		debug('Received %d bytes of CSS', body.length);
-...</pre></li>
     </ul>
 
 
